@@ -1,4 +1,5 @@
 let aspectH;
+let caranim1, caranim2, caranim3, caranim4, caranim5, caranim6;
 
 function setup() {
     aspectH = 9 * windowWidth/16;
