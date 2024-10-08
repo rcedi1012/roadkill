@@ -1,6 +1,8 @@
 let aspectH;
 let caranim1, caranim2, caranim3, caranim4, caranim5, caranim6;
-let rep, mam;
+let rep, mam, bird, amp, bug, other;
+let cari;
+let roadkill;
 
 function setup() {
     aspectH = 9 * windowWidth/16;
@@ -11,9 +13,15 @@ function setup() {
     caranim4 = false;
     caranim5 = false;
     caranim6 = false;
+    cari = 0;
+    roadkill = 0;
 
     rep = new reptile();
     mam = new mammal();
+    bird = new Bird();
+    amp = new toad();
+    bug = new Bug();
+    other = new fish();
 
     canvas = createCanvas(windowWidth, aspectH);
     canvas.position(0, windowHeight/2 - (height/2));
@@ -28,7 +36,26 @@ function draw() {
     rect(windowWidth * 0.05, 0, windowWidth * 0.9, aspectH);
 
     rep.show();
-    mam.show();
     rep.hover();
     rep.car();
+
+    mam.show();
+    mam.hover();
+    mam.car();
+
+    bird.show();
+    bird.hover();
+    bird.car();
+
+    amp.show();
+    amp.hover();
+    amp.car();
+
+    bug.show();
+    bug.hover();
+    bug.car();
+
+    other.show();
+    other.hover();
+    other.car();
 }
