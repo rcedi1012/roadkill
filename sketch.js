@@ -58,4 +58,6 @@ function draw() {
     other.show();
     other.hover();
     other.car();
+
+    text('x: ' + mouseX * 100 / windowWidth, windowWidth * 0.75, aspectH * 0.15);
 }

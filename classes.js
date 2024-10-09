@@ -1,6 +1,6 @@
 class reptile {
     constructor() {
-        this.x = windowWidth * 0.15;
+        this.x = windowWidth * 0.14;
         this.y = aspectH * 0.5;
         this.size = windowWidth * 0.025;
         this.cary = aspectH;
@@ -40,7 +40,7 @@ class reptile {
 
 class mammal {
   constructor() {
-    this.x = windowWidth * 0.2625;
+    this.x = windowWidth * 0.27;
     this.y = aspectH * 0.5;
     this.size = windowWidth * 0.025;
     this.cary = aspectH;
@@ -80,7 +80,7 @@ class mammal {
 
 class Bird {
   constructor() {
-    this.x = windowWidth * 0.4875;
+    this.x = windowWidth * 0.42;
     this.y = aspectH * 0.5;
     this.size = windowWidth * 0.025;
     this.cary = aspectH;
@@ -120,7 +120,7 @@ class Bird {
 
 class toad {
   constructor() {
-    this.x = windowWidth * 0.6;
+    this.x = windowWidth * 0.57;
     this.y = aspectH * 0.5;
     this.size = windowWidth * 0.025;
     this.cary = aspectH;
@@ -160,7 +160,7 @@ class toad {
 
 class Bug {
   constructor() {
-    this.x = windowWidth * 0.715;
+    this.x = windowWidth * 0.72;
     this.y = aspectH * 0.5;
     this.size = windowWidth * 0.025;
     this.cary = aspectH;
@@ -200,7 +200,7 @@ class Bug {
 
 class fish {
   constructor() {
-    this.x = windowWidth * 0.825;
+    this.x = windowWidth * 0.87;
     this.y = aspectH * 0.5;
     this.size = windowWidth * 0.025;
     this.cary = aspectH;
