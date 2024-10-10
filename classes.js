@@ -9,12 +9,16 @@ class reptile {
 }
 
   show() {
-    stroke(0);
-    fill(this.color);
+    noStroke();
+    noFill();
     ellipse(this.x, this.y, this.size *2);
-    fill(255);
-    text('reptile',this.x - windowWidth * 0.025,this.y);
-    rect(this.x - (windowWidth * 0.025), this.cary, windowWidth * 0.05, aspectH * 0.075);
+    if (snake1 == true) {
+      image(snakea,windowWidth * 0.078, aspectH * 0.85,windowWidth * 0.1, aspectH * 0.07);
+    }
+    if (snake2 == true) {
+      image(snakek,windowWidth * 0.078, aspectH * 0.85,windowWidth * 0.1, aspectH * 0.07);
+    }
+    image(car,this.x - (windowWidth * 0.05), this.cary, windowWidth * 0.1, aspectH * 0.3);
   }
 
   hover() {
@@ -24,11 +28,11 @@ class reptile {
   }
 
   car() {
-    if ((caranim1 == true) && (this.cary > -50)) {
+    if ((caranim1 == true) && (this.cary > -500)) {
         this.cary -= aspectH * 0.075;
-        cari += 1;
         if (this.cary < this.y) {
-            this.color = color(227, 24, 10);
+            snake1 = false;
+            snake2 = true;
             roadkill += 1;
             showb1 = true;
           }
@@ -38,9 +42,10 @@ class reptile {
     bar() {
       if (showb1 == true) {
         budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632)) * ((aspectH * 0.9)/ 100);
-        rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+        image(blood,this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
         textSize(windowWidth * 0.02);
-        text(table.getString(this.i,1), windowWidth * 0.0915, aspectH * 0.5);
+        fill(116, 201, 212);
+        text(table.getString(this.i,1), windowWidth * 0.094, aspectH * 0.5);
       }
     }
 }
@@ -63,10 +68,10 @@ class mammal {
       image(deerI, windowWidth * 0.15, aspectH * 0.47,windowWidth * 0.5, aspectH * 0.5);
     }
     if (deer2 == true) {
-      image(deerK, windowWidth * 0.15, aspectH * 0.47,windowWidth * 0.5, aspectH * 0.5);
+      image(deerD, windowWidth * 0.15, aspectH * 0.47,windowWidth * 0.5, aspectH * 0.5);
     }
     fill(255);
-    rect(this.x - (windowWidth * 0.025), this.cary, windowWidth * 0.05, aspectH * 0.075);
+    image(car,this.x - (windowWidth * 0.05), this.cary, windowWidth * 0.1, aspectH * 0.3);
   }
 
   hover() {
@@ -76,9 +81,8 @@ class mammal {
   }
 
   car() {
-    if ((caranim2 == true) && (this.cary > -50)) {
+    if ((caranim2 == true) && (this.cary > -500)) {
         this.cary -= aspectH * 0.075;
-        cari += 1;
         if (this.cary < this.y) {
             deer1 = false;
             deer2 = true;
@@ -92,7 +96,8 @@ class mammal {
       if (showb2 == true) {
         budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
         budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
-        rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+        image(blood,this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+        fill(116, 201, 212);
         text(table.getString(this.i,1), windowWidth * 0.2422, aspectH * 0.29);
       }
     }
@@ -109,12 +114,16 @@ class Bird {
 }
 
   show() {
-    stroke(0);
-    fill(this.color);
+    noStroke();
+    noFill();
     ellipse(this.x, this.y, this.size *2);
-    fill(255);
-    text('bird',this.x - windowWidth * 0.025,this.y);
-    rect(this.x - (windowWidth * 0.025), this.cary, windowWidth * 0.05, aspectH * 0.075);
+    if (bird1 == true) {
+      image(birda,windowWidth * 0.375, aspectH * 0.85,windowWidth * 0.1, aspectH * 0.08);
+    }
+    if (bird2 == true) {
+      image(birdk,windowWidth * 0.375, aspectH * 0.85,windowWidth * 0.1, aspectH * 0.08);
+    }
+    image(car,this.x - (windowWidth * 0.05), this.cary, windowWidth * 0.1, aspectH * 0.3);
   }
 
   hover() {
@@ -124,11 +133,11 @@ class Bird {
   }
 
   car() {
-    if ((caranim3 == true) && (this.cary > -50)) {
+    if ((caranim3 == true) && (this.cary > -500)) {
         this.cary -= aspectH * 0.075;
-        cari += 1;
         if (this.cary < this.y) {
-            this.color = color(227, 24, 10);
+            bird1 = false;
+            bird2 = true;
             roadkill += 1;
             showb3 = true;
         }
@@ -139,7 +148,8 @@ class Bird {
     if (showb3 == true) {
       budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
       budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
-      rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      image(blood,this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      fill(116, 201, 212);
       text(table.getString(this.i,1), windowWidth * 0.3965, aspectH * 0.74);
     }
   }
@@ -173,7 +183,6 @@ class toad {
   car() {
     if ((caranim4 == true) && (this.cary > -50)) {
         this.cary -= aspectH * 0.075;
-        cari += 1;
         if (this.cary < this.y) {
             this.color = color(227, 24, 10);
             roadkill += 1;
@@ -186,7 +195,7 @@ class toad {
     if (showb4 == true) {
       budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
         budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
-      rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      image(blood,this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
       text(table.getString(this.i,1), windowWidth * 0.547, aspectH * 0.81);
     }
   }
@@ -220,7 +229,6 @@ class Bug {
   car() {
     if ((caranim5 == true) && (this.cary > -50)) {
         this.cary -= aspectH * 0.075;
-        cari += 1;
         if (this.cary < this.y) {
             this.color = color(227, 24, 10);
             roadkill += 1;
@@ -233,7 +241,7 @@ class Bug {
     if (showb5 == true) {
       budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
         budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
-      rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      image(blood,this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
       text(table.getString(this.i,1), windowWidth * 0.697, aspectH * 0.81);
     }
   }
@@ -267,7 +275,6 @@ class fish {
   car() {
     if ((caranim6 == true) && (this.cary > -50)) {
         this.cary -= aspectH * 0.075;
-        cari += 1;
         if (this.cary < this.y) {
             this.color = color(227, 24, 10);
             roadkill += 1;
@@ -280,7 +287,7 @@ class fish {
     if (showb6 == true) {
       budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
         budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
-      rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      image(blood,this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
       text(table.getString(this.i,1), windowWidth * 0.857, aspectH * 0.81);
     }
   }
@@ -313,7 +320,7 @@ class Ending {
   }
 
   killed() {
-    if (roadkill >= 90) {
+    if (roadkill >= 180) {
       arrowShow = true;
     }
   }

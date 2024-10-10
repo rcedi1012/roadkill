@@ -8,9 +8,10 @@ let arrowShow;
 let endscreen;
 let endImage;
 let bg;
-let deer, deerI, deerD, deerK, snake, snakea, snakek, birdi, birda, birdk;
+let deer, deerI, deerD, snake, snakea, snakek, birdi, birda, birdk;
 let frog, froga, frogk, insect, insecta, insectk, fishi, fisha, fishk;
 let car, blood;
+let timer, stopwatch;
 budgetValues = [];
 
 function preload() {
@@ -19,7 +20,6 @@ function preload() {
     bg = loadImage("Background.png");
     deerI = loadImage("Deer idle.gif");
     deerD = loadImage("Deer death.gif");
-    deerK = loadImage("Dead deer.png");
     snakea = loadImage("Snake.png");
     snakek = loadImage("Dead snake.png");
     birda = loadImage("Bird (2).png");
@@ -54,8 +54,10 @@ function setup() {
     endscreen = false;
     deer1 = true;
     deer2 = false;
-    deer3 = false;
-    snake = snakea;
+    snake1 = true;
+    snake2 = false;
+    bird1 = true;
+    bird2 = false;
     birdi = birda;
     frog = froga;
     insect = insecta;
@@ -80,6 +82,8 @@ function setup() {
 
 function draw() {
     background(bg);
+    frameRate(60);
+    textFont('poor richard');
 
     rep.show();
     rep.hover();
