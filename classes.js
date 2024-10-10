@@ -20,7 +20,6 @@ class reptile {
   hover() {
     if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
       caranim1 = true;
-      text(caranim1, windowWidth * 0.5, aspectH * 0.5);
     }
   }
 
@@ -68,7 +67,6 @@ class mammal {
   hover() {
     if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
       caranim2 = true;
-      text(caranim2, windowWidth * 0.5, aspectH * 0.5);
     }
   }
 
@@ -89,7 +87,7 @@ class mammal {
         budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
         budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
         rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
-        text(budgetValues[this.i], windowWidth * 0.5, aspectH * 0.4);
+        text(table.getString(this.i,1), windowWidth * 0.2422, aspectH * 0.29);
       }
     }
 }
@@ -116,7 +114,6 @@ class Bird {
   hover() {
     if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
       caranim3 = true;
-      text(caranim3, windowWidth * 0.5, aspectH * 0.5);
     }
   }
 
@@ -137,6 +134,7 @@ class Bird {
       budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
       budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
       rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      text(table.getString(this.i,1), windowWidth * 0.3965, aspectH * 0.74);
     }
   }
 }
@@ -163,7 +161,6 @@ class toad {
   hover() {
     if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
       caranim4 = true;
-      text(caranim4, windowWidth * 0.5, aspectH * 0.5);
     }
   }
 
@@ -184,6 +181,7 @@ class toad {
       budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
         budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
       rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      text(table.getString(this.i,1), windowWidth * 0.547, aspectH * 0.81);
     }
   }
 }
@@ -210,7 +208,6 @@ class Bug {
   hover() {
     if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
       caranim5 = true;
-      text(caranim5, windowWidth * 0.5, aspectH * 0.5);
     }
   }
 
@@ -231,6 +228,7 @@ class Bug {
       budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
         budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
       rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      text(table.getString(this.i,1), windowWidth * 0.697, aspectH * 0.81);
     }
   }
 }
@@ -257,7 +255,6 @@ class fish {
   hover() {
     if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
       caranim6 = true;
-      text(caranim6, windowWidth * 0.5, aspectH * 0.5);
     }
   }
 
@@ -278,6 +275,7 @@ class fish {
       budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
         budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
       rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      text(table.getString(this.i,1), windowWidth * 0.857, aspectH * 0.81);
     }
   }
 }
