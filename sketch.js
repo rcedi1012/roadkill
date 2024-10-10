@@ -55,31 +55,32 @@ function draw() {
     rep.hover();
     rep.car();
     rep.bar();
+    rep.show();
 
-    mam.show();
     mam.hover();
     mam.car();
     mam.bar();
+    mam.show();
 
-    bird.show();
     bird.hover();
     bird.car();
     bird.bar();
+    bird.show();
 
-    amp.show();
     amp.hover();
     amp.car();
     amp.bar();
+    amp.show();
 
-    bug.show();
     bug.hover();
     bug.car();
     bug.bar();
+    bug.show();
 
-    other.show();
     other.hover();
     other.car();
     other.bar();
+    other.show();
 
     text('x: ' + mouseX * 100 / windowWidth, windowWidth * 0.75, aspectH * 0.15);
 }
