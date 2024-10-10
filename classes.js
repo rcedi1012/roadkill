@@ -353,12 +353,12 @@ class Ending {
     if (endscreen == true) {
       image(endImage, 0, 0, windowWidth, aspectH);
       fill(255, 200);
-      rect(windowWidth * 0.15, aspectH * 0.15, windowWidth * 0.7, aspectH * 0.7, windowWidth * 0.01);
+      rect(windowWidth * 0.05, aspectH * 0.15, windowWidth * 0.9, aspectH * 0.7, windowWidth * 0.01);
       textAlign(CENTER, CENTER);
       textFont('poor richard');
       textSize(windowWidth * 0.03);
       fill(58, 46, 57);
-      text("All the data presented was gathered using a \ncommunity initiative to record roadkill on the streets of Texas. \nDespite the numbers being significant, \nthere are still many undocumented animals that have been killed due to careless drivers. \nI urge you to try your best to break for any animals that may be crossing the road, \nso that there may be one last flattened body on the scorching asphalt.", windowWidth * 0.5, aspectH * 0.5 );
+      text("All the data presented was gathered using a \ncommunity initiative to record roadkill on the streets of Texas. \nDespite the numbers being significant, \nthere are still many undocumented animals \nthat have been killed due to careless drivers. \nI urge you to try your best to break \nfor any animals that may be crossing the road, \nso that there may be one last flattened body on the scorching asphalt.\nRefresh to restart!", windowWidth * 0.5, aspectH * 0.5 );
     }
   }
 }
