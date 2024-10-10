@@ -38,8 +38,11 @@ class reptile {
   
     bar() {
       if (showb1 == true) {
-        budgetValues[this.i] = table.getString(this.i, 1);
+        budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
+        budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
         rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+        textSize(windowWidth * 0.02);
+        text(table.getString(this.i,1), windowWidth * 0.0915, aspectH * 0.5);
       }
     }
 }
@@ -84,8 +87,10 @@ class mammal {
   
     bar() {
       if (showb2 == true) {
-        budgetValues[this.i] = table.getString(this.i, 1);
+        budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
+        budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
         rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+        text(budgetValues[this.i], windowWidth * 0.5, aspectH * 0.4);
       }
     }
 }
@@ -130,7 +135,8 @@ class Bird {
 
   bar() {
     if (showb3 == true) {
-      budgetValues[this.i] = table.getString(this.i, 1);
+      budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
+      budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
       rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
     }
   }
@@ -176,7 +182,8 @@ class toad {
 
   bar() {
     if (showb4 == true) {
-      budgetValues[this.i] = table.getString(this.i, 1);
+      budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
+        budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
       rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
     }
   }
@@ -222,7 +229,8 @@ class Bug {
 
   bar() {
     if (showb5 == true) {
-      budgetValues[this.i] = table.getString(this.i, 1);
+      budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
+        budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
       rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
     }
   }
@@ -268,7 +276,8 @@ class fish {
 
   bar() {
     if (showb6 == true) {
-      budgetValues[this.i] = table.getString(this.i, 1);
+      budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
+        budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
       rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
     }
   }

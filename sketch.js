@@ -83,4 +83,5 @@ function draw() {
     other.show();
 
     text('x: ' + mouseX * 100 / windowWidth, windowWidth * 0.75, aspectH * 0.15);
+    text('y: ' + mouseY * 100 / aspectH, windowWidth * 0.75, aspectH * 0.25);
 }
