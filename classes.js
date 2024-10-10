@@ -337,7 +337,7 @@ class Ending {
   }
 
   killed() {
-    if (roadkill >= 3) {
+    if (deer2 == true) {
       arrowShow = true;
     }
   }
