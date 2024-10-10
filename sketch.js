@@ -58,9 +58,12 @@ function setup() {
     snake2 = false;
     bird1 = true;
     bird2 = false;
-    birdi = birda;
-    frog = froga;
-    insect = insecta;
+    frog1 = true;
+    frog2 = false;
+    insect1 = true;
+    insect2 = false;
+    fish1 = true;
+    fish2 = false;
     fishi = fisha;
     roadkill = 0;
 
