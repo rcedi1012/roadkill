@@ -24,6 +24,7 @@ class reptile {
   hover() {
     if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
       caranim1 = true;
+      roadkill += 1;
     }
   }
 
@@ -33,7 +34,6 @@ class reptile {
         if (this.cary < this.y) {
             snake1 = false;
             snake2 = true;
-            roadkill += 1;
             showb1 = true;
           }
       }
@@ -77,6 +77,7 @@ class mammal {
   hover() {
     if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
       caranim2 = true;
+      roadkill += 1;
     }
   }
 
@@ -86,7 +87,6 @@ class mammal {
         if (this.cary < this.y) {
             deer1 = false;
             deer2 = true;
-            roadkill += 1;
             showb2 = true;
           }
       }
@@ -129,6 +129,7 @@ class Bird {
   hover() {
     if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
       caranim3 = true;
+      roadkill += 1;
     }
   }
 
@@ -138,7 +139,6 @@ class Bird {
         if (this.cary < this.y) {
             bird1 = false;
             bird2 = true;
-            roadkill += 1;
             showb3 = true;
         }
     }
@@ -181,6 +181,7 @@ class toad {
   hover() {
     if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
       caranim4 = true;
+      roadkill += 1;
     }
   }
 
@@ -190,7 +191,6 @@ class toad {
         if (this.cary < this.y) {
             frog1 = false;
             frog2 = true;
-            roadkill += 1;
             showb4 = true;
         }
     }
@@ -232,6 +232,7 @@ class Bug {
   hover() {
     if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
       caranim5 = true;
+      roadkill += 1;
     }
   }
 
@@ -241,7 +242,6 @@ class Bug {
         if (this.cary < this.y) {
             insect1 = false;
             insect2 = true;
-            roadkill += 1;
             showb5 = true;
         }
     }
@@ -284,6 +284,7 @@ class fish {
   hover() {
     if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
       caranim6 = true;
+      roadkill += 1;
     }
   }
 
@@ -293,7 +294,6 @@ class fish {
         if (this.cary < this.y) {
             fish1 = false;
             fish2 = true;
-            roadkill += 1;
             showb6 = true;
         }
     }
@@ -337,7 +337,7 @@ class Ending {
   }
 
   killed() {
-    if (roadkill >= 180) {
+    if (roadkill >= 6) {
       arrowShow = true;
     }
   }
