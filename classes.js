@@ -337,7 +337,7 @@ class Ending {
   }
 
   killed() {
-    if (roadkill >= 6) {
+    if (roadkill >= 3) {
       arrowShow = true;
     }
   }
