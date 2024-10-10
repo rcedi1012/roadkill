@@ -8,11 +8,13 @@ let ending;
 let arrowShow;
 let endscreen;
 let endImage;
+let bg;
 budgetValues = [];
 
 function preload() {
     table = loadTable("roadkill_stats.csv", "csv", "header");
     endImage = loadImage("white-tailed-deer-934512_1920.jpg");
+    bg = loadImage("Background.png");
 }
 
 function setup() {
@@ -53,11 +55,7 @@ function setup() {
 }
 
 function draw() {
-    background(30, 85, 92);
-
-    fill(82, 73, 81);
-    noStroke();
-    rect(windowWidth * 0.05, 0, windowWidth * 0.9, aspectH);
+    background(bg);
 
     rep.show();
     rep.hover();
