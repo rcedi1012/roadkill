@@ -3,16 +3,29 @@ let caranim1, caranim2, caranim3, caranim4, caranim5, caranim6;
 let rep, mam, bird, amp, bug, other;
 let cari;
 let roadkill;
+let showb1, showb2, showb3, showb4, showb5, showb6;
+budgetValues = [];
+
+function preload() {
+    table = loadTable("roadkill_stats.csv", "csv", "header");
+}
 
 function setup() {
     aspectH = 9 * windowWidth/16;
-    
+    //aspectH = windowHeight;
+
     caranim1 = false;
     caranim2 = false;
     caranim3 = false;
     caranim4 = false;
     caranim5 = false;
     caranim6 = false;
+    showb1 = false;
+    showb2 = false;
+    showb3 = false;
+    showb4 = false;
+    showb5 = false;
+    showb6 = false;
     cari = 0;
     roadkill = 0;
 
@@ -22,6 +35,9 @@ function setup() {
     amp = new toad();
     bug = new Bug();
     other = new fish();
+
+    numberOfRows = table.getRowCount();
+    numberOfColumns = table.getColumnCount();
 
     canvas = createCanvas(windowWidth, aspectH);
     canvas.position(0, windowHeight/2 - (height/2));
@@ -38,26 +54,32 @@ function draw() {
     rep.show();
     rep.hover();
     rep.car();
+    rep.bar();
 
     mam.show();
     mam.hover();
     mam.car();
+    mam.bar();
 
     bird.show();
     bird.hover();
     bird.car();
+    bird.bar();
 
     amp.show();
     amp.hover();
     amp.car();
+    amp.bar();
 
     bug.show();
     bug.hover();
     bug.car();
+    bug.bar();
 
     other.show();
     other.hover();
     other.car();
+    other.bar();
 
     text('x: ' + mouseX * 100 / windowWidth, windowWidth * 0.75, aspectH * 0.15);
 }
