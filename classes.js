@@ -37,12 +37,8 @@ class reptile {
     }
   
     bar() {
-      budgetValues[this.i] = 0;
       if (showb1 == true) {
-        while (budgetValues[this.i] < ((table.getString(this.i, 1)* 100 /4632)) * ((aspectH * 0.9)/ 100)) {
-          budgetValues[this.i] += aspectH * 0.1;
-          text(budgetValues[this.i], windowWidth * 0.7, aspectH * 0.7);
-        }
+        budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632)) * ((aspectH * 0.9)/ 100);
         rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
         textSize(windowWidth * 0.02);
         text(table.getString(this.i,1), windowWidth * 0.0915, aspectH * 0.5);
@@ -287,6 +283,3 @@ class fish {
 }
 //things to do:
 //create art
-//animal hit/cars initiated score
-//the actual graph part
-//if user breaks for all the animals, good ending
