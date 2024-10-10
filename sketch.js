@@ -4,10 +4,15 @@ let rep, mam, bird, amp, bug, other;
 let cari;
 let roadkill;
 let showb1, showb2, showb3, showb4, showb5, showb6;
+let ending;
+let arrowShow;
+let endscreen;
+let endImage;
 budgetValues = [];
 
 function preload() {
     table = loadTable("roadkill_stats.csv", "csv", "header");
+    endImage = loadImage("white-tailed-deer-934512_1920.jpg");
 }
 
 function setup() {
@@ -26,6 +31,8 @@ function setup() {
     showb4 = false;
     showb5 = false;
     showb6 = false;
+    arrowShow = false;
+    endscreen = false;
     cari = 0;
     roadkill = 0;
 
@@ -35,6 +42,7 @@ function setup() {
     amp = new toad();
     bug = new Bug();
     other = new fish();
+    ending = new Ending();
 
     numberOfRows = table.getRowCount();
     numberOfColumns = table.getColumnCount();
@@ -82,6 +90,14 @@ function draw() {
     other.bar();
     other.show();
 
+    ending.show();
+    ending.killed();
+    ending.end();
+
     text('x: ' + mouseX * 100 / windowWidth, windowWidth * 0.75, aspectH * 0.15);
     text('y: ' + mouseY * 100 / aspectH, windowWidth * 0.75, aspectH * 0.25);
+}
+
+function mouseClicked() {
+    ending.clicked();
 }

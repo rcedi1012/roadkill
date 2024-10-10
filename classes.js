@@ -281,5 +281,55 @@ class fish {
     }
   }
 }
-//things to do:
-//create art
+
+class Ending {
+  constructor() {
+    this.x = windowWidth * 0.04;
+    this.y = aspectH * 0.02;
+    this.sizex = windowWidth * 0.9;
+    this.sizey = aspectH * 0.1;
+    this.color = 244, 216, 205;
+  }
+
+  show() {
+    if (arrowShow == true) {
+      noStroke();
+      fill(this.color);
+      rect(this.sizex, this.sizey, this.x, this.y);
+      triangle(windowWidth * 0.97, aspectH * 0.107, windowWidth * 0.93, aspectH * 0.08, windowWidth * 0.93, aspectH * 0.14);
+    }
+
+    if ((mouseX > this.sizex) && (mouseX < this.x+this.sizex) &&
+    (mouseY > this.sizey) && (mouseY < this.y+this.sizey)) {
+      this.color = 191, 95, 78;
+    }
+    else {
+      this.color = 244, 216, 205;
+    }
+  }
+
+  killed() {
+    if (roadkill >= 90) {
+      arrowShow = true;
+    }
+  }
+
+  clicked() {
+    if ((mouseX > this.sizex) && (mouseX < this.x+this.sizex) &&
+    (mouseY > this.sizey) && (mouseY < this.y+this.sizey)) {
+      endscreen = true;
+    }
+  }
+
+  end() {
+    if (endscreen == true) {
+      image(endImage, 0, 0, windowWidth, aspectH);
+      textAlign(CENTER, CENTER);
+      textFont('poor richard');
+      textSize(windowWidth * 0.03);
+      fill(58, 46, 57);
+      text("All the data presented was gathered using a \ncommunity initiative to record roadkill on the streets of Texas. \nDespite the numbers being significant, \nthere are still many undocumented animals that have been killed due to careless drivers. \nI urge you to try your best to break for any animals that may be crossing the road, \nso that there may be one last flattened body on the scorching asphalt.", windowWidth * 0.5, aspectH * 0.5 );
+    }
+  }
+}
+
