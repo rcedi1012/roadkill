@@ -1,7 +1,6 @@
 let aspectH;
 let caranim1, caranim2, caranim3, caranim4, caranim5, caranim6;
 let rep, mam, bird, amp, bug, other;
-let cari;
 let roadkill;
 let showb1, showb2, showb3, showb4, showb5, showb6;
 let ending;
@@ -9,7 +8,8 @@ let arrowShow;
 let endscreen;
 let endImage;
 let bg;
-let deer, deerI;
+let deer, deerI, deerD, deerK; //snake, snakea, snakek, birdi, birda, birdk;
+//let frog, froga, frogk, insect, insecta, insectk, fish, fisha, fishk;
 budgetValues = [];
 
 function preload() {
@@ -17,6 +17,18 @@ function preload() {
     endImage = loadImage("white-tailed-deer-934512_1920.jpg");
     bg = loadImage("Background.png");
     deerI = loadImage("Deer idle.gif");
+    deerD = loadImage("Deer death.gif");
+    deerK = loadImage("Dead deer.png");
+    /* snakea = loadImage("Snake.png");
+    snakek = loadImage("Dead snake.png");
+    birda = loadImage("Bird (2).png");
+    birdk = loadImage("Dead bird.png");
+    froga = loadImage("Frog.png");
+    frogk = loadImage("Dead frog.png");
+    insecta = loadImage("Bug (1).png");
+    insectk = loadImage("Dead bug.png");
+    fisha = loadImage("Fish.png");
+    fishk = loadImage("Dead fish.png"); */
 }
 
 function setup() {
@@ -38,6 +50,11 @@ function setup() {
     arrowShow = false;
     endscreen = false;
     deer = deerI;
+    snake = snakea;
+    birdi = birda;
+    frog = froga;
+    insect = insecta;
+    fish = fisha;
     cari = 0;
     roadkill = 0;
 
