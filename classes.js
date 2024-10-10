@@ -1,48 +1,47 @@
 class reptile {
-    constructor() {
-        this.x = windowWidth * 0.14;
-        this.y = aspectH * 0.9;
-        this.size = windowWidth * 0.025;
-        this.cary = aspectH;
-        this.color = color(55);
-        this.i = 0;
-    }
-    
-      show() {
-        stroke(0);
-        fill(this.color);
-        ellipse(this.x, this.y, this.size *2);
-        fill(255);
-        text('reptile',this.x - windowWidth * 0.025,this.y);
-        rect(this.x - (windowWidth * 0.025), this.cary, windowWidth * 0.05, aspectH * 0.075);
-      }
-    
-      hover() {
-        if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
-          caranim1 = true;
-          text(caranim1, windowWidth * 0.5, aspectH * 0.5);
-        }
-      }
+  constructor() {
+    this.x = windowWidth * 0.12;
+    this.y = aspectH * 0.9;
+    this.size = windowWidth * 0.025;
+    this.cary = aspectH;
+    this.color = color(55);
+    this.i = 0;
+}
 
-      car() {
-        if ((caranim1 == true) && (this.cary > -50)) {
-            this.cary -= aspectH * 0.075;
-            cari += 1;
-            if (this.cary < this.y) {
-                this.color = color(227, 24, 10);
-                roadkill += 1;
-                showb1 = true;
-              }
+  show() {
+    stroke(0);
+    fill(this.color);
+    ellipse(this.x, this.y, this.size *2);
+    fill(255);
+    text('reptile',this.x - windowWidth * 0.025,this.y);
+    rect(this.x - (windowWidth * 0.025), this.cary, windowWidth * 0.05, aspectH * 0.075);
+  }
+
+  hover() {
+    if ((dist(mouseX, mouseY, this.x, this.y) < this.size)) {
+      caranim1 = true;
+      text(caranim1, windowWidth * 0.5, aspectH * 0.5);
+    }
+  }
+
+  car() {
+    if ((caranim1 == true) && (this.cary > -50)) {
+        this.cary -= aspectH * 0.075;
+        cari += 1;
+        if (this.cary < this.y) {
+            this.color = color(227, 24, 10);
+            roadkill += 1;
+            showb1 = true;
           }
-        }
-      
-        bar() {
-          if (showb1 == true) {
-            budgetValues[this.i] = table.getString(this.i, 1);
-            rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.1), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
-            text(budgetValues[this.i], windowWidth * 0.5, aspectH * 0.5);
-          }
-        }
+      }
+    }
+  
+    bar() {
+      if (showb1 == true) {
+        budgetValues[this.i] = table.getString(this.i, 1);
+        rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      }
+    }
 }
 
 class mammal {
@@ -86,7 +85,7 @@ class mammal {
     bar() {
       if (showb2 == true) {
         budgetValues[this.i] = table.getString(this.i, 1);
-        rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.1), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+        rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
       }
     }
 }
@@ -132,7 +131,7 @@ class Bird {
   bar() {
     if (showb3 == true) {
       budgetValues[this.i] = table.getString(this.i, 1);
-      rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.1), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
     }
   }
 }
@@ -178,7 +177,7 @@ class toad {
   bar() {
     if (showb4 == true) {
       budgetValues[this.i] = table.getString(this.i, 1);
-      rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.1), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
     }
   }
 }
@@ -224,7 +223,7 @@ class Bug {
   bar() {
     if (showb5 == true) {
       budgetValues[this.i] = table.getString(this.i, 1);
-      rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.1), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
     }
   }
 }
@@ -270,7 +269,7 @@ class fish {
   bar() {
     if (showb6 == true) {
       budgetValues[this.i] = table.getString(this.i, 1);
-      rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.1), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      rect(this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
     }
   }
 }
