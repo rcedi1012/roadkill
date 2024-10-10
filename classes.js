@@ -56,11 +56,11 @@ class mammal {
 }
 
   show() {
-    stroke(0);
-    fill(this.color);
+    noStroke();
+    noFill();
     ellipse(this.x, this.y, this.size *2);
+    image(deer, windowWidth * 0.15, aspectH * 0.47,windowWidth * 0.5, aspectH * 0.5);
     fill(255);
-    text('mammal',this.x - windowWidth * 0.025,this.y);
     rect(this.x - (windowWidth * 0.025), this.cary, windowWidth * 0.05, aspectH * 0.075);
   }
 

@@ -9,12 +9,14 @@ let arrowShow;
 let endscreen;
 let endImage;
 let bg;
+let deer, deerI;
 budgetValues = [];
 
 function preload() {
     table = loadTable("roadkill_stats.csv", "csv", "header");
     endImage = loadImage("white-tailed-deer-934512_1920.jpg");
     bg = loadImage("Background.png");
+    deerI = loadImage("Deer idle.gif");
 }
 
 function setup() {
@@ -35,6 +37,7 @@ function setup() {
     showb6 = false;
     arrowShow = false;
     endscreen = false;
+    deer = deerI;
     cari = 0;
     roadkill = 0;
 
