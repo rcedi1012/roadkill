@@ -8,8 +8,9 @@ let arrowShow;
 let endscreen;
 let endImage;
 let bg;
-let deer, deerI, deerD, deerK; //snake, snakea, snakek, birdi, birda, birdk;
-//let frog, froga, frogk, insect, insecta, insectk, fish, fisha, fishk;
+let deer, deerI, deerD, deerK, snake, snakea, snakek, birdi, birda, birdk;
+let frog, froga, frogk, insect, insecta, insectk, fishi, fisha, fishk;
+let car, blood;
 budgetValues = [];
 
 function preload() {
@@ -19,7 +20,7 @@ function preload() {
     deerI = loadImage("Deer idle.gif");
     deerD = loadImage("Deer death.gif");
     deerK = loadImage("Dead deer.png");
-    /* snakea = loadImage("Snake.png");
+    snakea = loadImage("Snake.png");
     snakek = loadImage("Dead snake.png");
     birda = loadImage("Bird (2).png");
     birdk = loadImage("Dead bird.png");
@@ -28,7 +29,9 @@ function preload() {
     insecta = loadImage("Bug (1).png");
     insectk = loadImage("Dead bug.png");
     fisha = loadImage("Fish.png");
-    fishk = loadImage("Dead fish.png"); */
+    fishk = loadImage("Dead fish.png");
+    car = loadImage("Car.png");
+    blood = loadImage("Blood bar.png");
 }
 
 function setup() {
@@ -49,13 +52,14 @@ function setup() {
     showb6 = false;
     arrowShow = false;
     endscreen = false;
-    deer = deerI;
+    deer1 = true;
+    deer2 = false;
+    deer3 = false;
     snake = snakea;
     birdi = birda;
     frog = froga;
     insect = insecta;
-    fish = fisha;
-    cari = 0;
+    fishi = fisha;
     roadkill = 0;
 
     rep = new reptile();

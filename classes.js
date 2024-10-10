@@ -59,7 +59,12 @@ class mammal {
     noStroke();
     noFill();
     ellipse(this.x, this.y, this.size *2);
-    image(deer, windowWidth * 0.15, aspectH * 0.47,windowWidth * 0.5, aspectH * 0.5);
+    if (deer1 == true) {
+      image(deerI, windowWidth * 0.15, aspectH * 0.47,windowWidth * 0.5, aspectH * 0.5);
+    }
+    if (deer2 == true) {
+      image(deerK, windowWidth * 0.15, aspectH * 0.47,windowWidth * 0.5, aspectH * 0.5);
+    }
     fill(255);
     rect(this.x - (windowWidth * 0.025), this.cary, windowWidth * 0.05, aspectH * 0.075);
   }
@@ -75,7 +80,8 @@ class mammal {
         this.cary -= aspectH * 0.075;
         cari += 1;
         if (this.cary < this.y) {
-            this.color = color(227, 24, 10);
+            deer1 = false;
+            deer2 = true;
             roadkill += 1;
             showb2 = true;
           }
