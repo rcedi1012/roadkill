@@ -97,6 +97,7 @@ class mammal {
         budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
         budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
         image(blood,this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+        textSize(windowWidth * 0.02);
         fill(116, 201, 212);
         text(table.getString(this.i,1), windowWidth * 0.2422, aspectH * 0.29);
       }
@@ -149,6 +150,7 @@ class Bird {
       budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
       budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
       image(blood,this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      textSize(windowWidth * 0.02);
       fill(116, 201, 212);
       text(table.getString(this.i,1), windowWidth * 0.3965, aspectH * 0.74);
     }
@@ -201,6 +203,7 @@ class toad {
       budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
         budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
       image(blood,this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      textSize(windowWidth * 0.02);
       fill(116, 201, 212);
       text(table.getString(this.i,1), windowWidth * 0.547, aspectH * 0.81);
     }
@@ -252,6 +255,7 @@ class Bug {
       budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
         budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
       image(blood,this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      textSize(windowWidth * 0.02);
       fill(116, 201, 212);
       text(table.getString(this.i,1), windowWidth * 0.697, aspectH * 0.81);
     }
@@ -304,6 +308,7 @@ class fish {
       budgetValues[this.i] = ((table.getString(this.i, 1)* 100 /4632));
         budgetValues[this.i] = budgetValues[this.i] * (aspectH * 0.9)/ 100;
       image(blood,this.i * (windowWidth * 0.15) + (windowWidth * 0.095), (aspectH * 0.9) - budgetValues[this.i], windowWidth * 0.05, budgetValues[this.i]);
+      textSize(windowWidth * 0.02);
       fill(116, 201, 212);
       text(table.getString(this.i,1), windowWidth * 0.857, aspectH * 0.81);
     }
